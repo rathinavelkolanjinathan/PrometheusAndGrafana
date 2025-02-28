@@ -48,5 +48,5 @@ Available datasource is :-
 7.PostGress Sql
 8.Graphite
 9.Grafana Logging
-10Stack driver
+10.Stack driver
 11.TestData db
