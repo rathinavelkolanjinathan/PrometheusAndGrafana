@@ -3,13 +3,15 @@ DevOps Tools
 
 Monitoring tools 
 Prometheus
+http://localhost:8080/actuator/prometheus
+
 
 Graph Represantation
 
 Grafana
 
 
-From browser run below after start your application . from the actuator itself we can get the promethus details 
+From browser run below url after start your application we can see from the actuator itself  get the promethus details like http://localhost:8080/actuator/prometheus
 http://localhost:8080/actuator
 
 
