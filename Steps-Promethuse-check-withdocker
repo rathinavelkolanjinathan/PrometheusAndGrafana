@@ -1,0 +1,50 @@
+
+DevOps Tools 
+
+Monitoring tools 
+Prometheus
+
+Graph Represantation
+
+Grafana
+
+
+From browser run below after start your application . from the actuator itself we can get the promethus details 
+http://localhost:8080/actuator
+
+
+docker terminal 
+
+1.Docker pull prom/prometheus
+
+2.Docker image ls
+
+3.from the application we should be add the prometheus yaml file for prometheus config.
+
+Run the prometheus server
+4.Docker run -p 9090:9090 -v F:/REPOSITORY_KOLANJI/Projects-SpringBoot/PrometheusAndGrafana/src/main/resources/prometheus.yml prom/prometheus
+
+5.http://192.168.99.100:9090/graph  (this url check with the docker itself)
+
+Run the Grafana server
+6.Docker run -d --name=grafana -p 3000:3000 grafana/grafana
+   Browser or docker itself :-  http://192.168.99.100:3000/login
+
+7.In the grafana dashboard select the Connections menu -> select the DataSource -> promethues
+give the end point of premethus : http://192.168.99.100:9090
+
+8.select dashboard -> create dashboard -> and give the metrics type on the query -> then execute it it will show the bar 
+
+
+Available datasource is :-
+1.CloudWatch
+2.Promethues
+3.ElasticSearch
+4.InfluxDb
+5.Mysql
+6.MicrosoftSql Server
+7.PostGress Sql
+8.Graphite
+9.Grafana Logging
+10Stack driver
+11.TestData db
